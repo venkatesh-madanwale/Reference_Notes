@@ -1,0 +1,9 @@
+
+/*********************************************************************/
+
+08_04_2025
+Assigned by- Sanjeev Sir
+1) Code to check if string is palindrome
+2) Code to check if sum of array elements is even or odd
+
+/*********************************************************************/
