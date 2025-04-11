@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <button><a href="home.html">Home</a></button>
+            <button>Register</button>
+            <button>Login</button>
+            <button>Services</button>
+        </div>
+        
+        <div class="logincon">
+            Enter your details:
+            <input type="text" placeholder="enter username" name="username" id="un">
+            <input type="password" placeholder="enter password" name="password" id="ps">
+            <button onclick="fun()"><a href="home.html">Submit</a></button>
+        </div>
+</div>
+</body>
+<script>
+    let ipr = document.getElementsByTagName("input")
+    let res = document.getElementsByTagName("span")[0]
+    let data = {}
+    function fun(){
+        sessionStorage.setItem("username", ipr[0].value);
+        sessionStorage.setItem("password", ipr[1].value);
+        data = { username:sessionStorage.getItem("username"), password:sessionStorage.getItem("password") };
+        console.log(data)
+
+    }
+</script>
+</html>
