@@ -25,14 +25,12 @@
 </body>
 <script>
     let ipr = document.getElementsByTagName("input")
-    let res = document.getElementsByTagName("span")[0]
     let data = {}
     function fun(){
         sessionStorage.setItem("username", ipr[0].value);
         sessionStorage.setItem("password", ipr[1].value);
         data = { username:sessionStorage.getItem("username"), password:sessionStorage.getItem("password") };
-        console.log(data)
-
+        // console.log(data)
     }
 </script>
 </html>
