@@ -1,6 +1,11 @@
 /* Container Styling */
+*{
+  margin: 0%;
+  padding: 0%;
+  outline: none;
+}
 .con {
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;

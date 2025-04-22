@@ -1,3 +1,5 @@
+import "./cards.css"
+
 function Card(props){
     let prod=props.obj
     return(
