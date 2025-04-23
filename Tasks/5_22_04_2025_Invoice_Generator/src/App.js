@@ -5,6 +5,8 @@ import ItemList from './ItemList';
 import TotalAmount from './TotalAmount';
 import { jsPDF } from 'jspdf';
 import './App.css';
+import Footer from './Footer';
+import Nav from './Nav';
 
 function App() {
     const [items, setItems] = React.useState([]);
@@ -52,6 +54,8 @@ function App() {
     };
 
     return (
+        <>
+        <Nav/>
         <div className="App">
             <h1>MnM Retails. Ltd. -Invoice</h1>
             <BillDetails onAddItem={handleAddItem} />
@@ -62,6 +66,9 @@ function App() {
             <button
                 onClick={handleDownloadPDF}>Download PDF</button>
         </div>
+        <Footer/>
+        </>
+        
     );
 }
 

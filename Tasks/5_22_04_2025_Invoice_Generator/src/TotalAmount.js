@@ -6,7 +6,7 @@ const TotalAmount = ({ total }) => {
         <div className="total">
             <h3>
                 Total Amount:
-                ${total.toFixed(2)}
+                Rs  {total.toFixed(2)}
             </h3>
         </div>
     );
