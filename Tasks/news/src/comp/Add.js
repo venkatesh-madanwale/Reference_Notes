@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect, useContext } from "react";
 import Cookies from "js-cookie";
 import Ct from "./Ct";
+import "./Add.css"
 const Add = () => {
   let [msg, setMsg] = useState("");
   let [artical, setArt] = useState({ title: "", text: "", cat: "" });
@@ -30,8 +31,8 @@ const Add = () => {
   };
 
   return (
-    <div className="add-con">
-      <div className="add-box">
+    <div className="addcon">
+      <div className="addbox">
         <h2> CREATE YOUR POST</h2>
         <p>Share your thoughts with the world!</p>
         <h4 className="msg">{msg}</h4>
