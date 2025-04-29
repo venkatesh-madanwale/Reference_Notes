@@ -1,0 +1,80 @@
+.addcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+  }
+  
+  .addbox {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .addbox h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .addbox p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .addbox .msg {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .addbox input,
+  .addbox textarea,
+  .addbox select,
+  .addbox button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .addbox input,
+  .addbox textarea {
+    box-sizing: border-box;
+  }
+  
+  .addbox textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  .addbox select {
+    cursor: pointer;
+  }
+  
+  .addbox button {
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addbox button:hover {
+    background-color: #45a049;
+  }
+  
+  .addbox option {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
