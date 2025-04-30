@@ -32,7 +32,7 @@ const Nav = () => {
       {obj.state.token !== '' && <Link to="/addpost">AddPost</Link>}
       {obj.state.token !== '' && obj.state.role === 'admin' && <Link to="/admin">Admin</Link>}
       {obj.state.token !== '' && <Link to="/logout">Logout</Link>}
-      {obj.state.token !== '' && <a>{obj.state.name}</a>}
+      {/* {obj.state.token !== '' && <a>{obj.state.name}</a>} */}
 
       {/* Search Bar */}
       <form onSubmit={handleSearchSubmit} style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>

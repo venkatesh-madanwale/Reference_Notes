@@ -15,33 +15,38 @@ import Sp from './comp/Sp';
 import News from './comp/News';
 import Pdm from './comp/Pdm';
 import Ct from './comp/Ct';
+import Footer from './comp/Footer';
 function App() {
   let [state, setState] = useState({ _id: '', name: '', token: '', role: '' });
   let updstate = (obj) => {
     setState({ ...state, ...obj });
   };
   let obj = { state: state, updstate: updstate };
+
   return (
     <BrowserRouter>
       <Ct.Provider value={obj}>
-        <Nav />
-        <div className="content-wrapper"> {/* Optional container for your main content */}
-          <Routes>
-            <Route path="/" element={<Home />}>
-              <Route path="/" element={<All />} />
-              <Route path="/bs" element={<Bs />} />
-              <Route path="/edu" element={<Edu />} />
-              <Route path="/sp" element={<Sp />} />
-              <Route path="/news" element={<News />} />
-              <Route path="/pdm" element={<Pdm />} />
-            </Route>
-            <Route path="/login" element={<Login />} />
-            <Route path="/reg" element={<Reg />} />
-            <Route path="/addpost" element={<Add />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/logout" element={<Logout />} />
-          </Routes>
-        </div>
+        <main className="main-container">
+          <Nav />
+          <div className="content-wrapper">
+            <Routes>
+              <Route path="/" element={<Home />}>
+                <Route path="/" element={<All />} />
+                <Route path="/bs" element={<Bs />} />
+                <Route path="/edu" element={<Edu />} />
+                <Route path="/sp" element={<Sp />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/pdm" element={<Pdm />} />
+              </Route>
+              <Route path="/login" element={<Login />} />
+              <Route path="/reg" element={<Reg />} />
+              <Route path="/addpost" element={<Add />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/logout" element={<Logout />} />
+            </Routes>
+          </div>
+        <Footer/>
+        </main>
       </Ct.Provider>
     </BrowserRouter>
   );

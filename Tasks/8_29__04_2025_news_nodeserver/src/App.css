@@ -1,70 +1,122 @@
-*{
-  margin: 0px;
-  padding: 0px;
-  outline: none;
+:root {
+  --primary-color: #00b4d8;
+  --accent-color: #3498db;
+  --hover-bg: #2d2d2d;
+  --dark-bg: #1a1a1a;
+  --text-light: #ffffff;
+  --text-muted: #666;
+  --border-color: #333;
+  --highlight: #0ff;
+  --font-main: 'Arial', sans-serif;
 }
-nav{
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #f5f6fa;
+}
+
+nav {
   width: 100%;
   height: 10vh;
   background-color: black;
- display: flex;
- justify-content: space-evenly;
- align-items: center;
-}
-nav a{
-  text-decoration: none;
-  color: white;
-}
-.hcon {
-  width: 100%;
-  height: calc(100vh - 10vh); /* Occupy the viewport height minus the navbar height */
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
+nav a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--highlight);
+}
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f6f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content-wrapper {
+  flex: 1;
+  /* padding: 20px; */
+}
+
+
+.hcon {
+  display: flex;
+  height: calc(100vh - 10vh);
+  width: 100%;
+}
 
 .left {
   width: 20%;
-  background-color: #1a1a1a;    
-  padding: 20px 0;             
+  background-color: var(--dark-bg);
+  padding: 20px 0;
   height: 100%;
-  border-right: 1px solid #333;
+  border-right: 1px solid var(--border-color);
 }
 
 .left a {
-  display: flex;             
+  display: flex;
   align-items: center;
   padding: 12px 24px;
-  color: #ffffff;            
+  color: var(--text-light);
   text-decoration: none;
-  font-family: Arial, sans-serif;
   font-size: 15px;
-  transition: all 0.2s ease; 
+  transition: all 0.2s ease;
 }
 
 .left a:hover {
-  background-color: #2d2d2d; 
-  color: #00b4d8;         
-  padding-left: 28px;       
+  background-color: var(--hover-bg);
+  color: var(--primary-color);
+  padding-left: 28px;
 }
 
 .left a:active {
-  background-color: #404040; 
+  background-color: #404040;
 }
 
 .left a.active {
-  background-color: #2d2d2d;
-  color: #00b4d8;
-  border-left: 3px solid #00b4d8;
-  padding-left: 25px;       
+  background-color: var(--hover-bg);
+  color: var(--primary-color);
+  border-left: 3px solid var(--primary-color);
+  padding-left: 25px;
 }
 
-.right{
+.right {
   width: 80%;
   height: 100%;
   background-color: darkkhaki;
   overflow: auto;
-  scrollbar-width: 0px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) #f5f6fa;
 }
+
+.right::-webkit-scrollbar {
+  width: 8px;
+}
+.right::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+}
+.right::-webkit-scrollbar-track {
+  background-color: #f5f6fa;
+}
+
 .newscon {
   padding: 40px;
   background-color: #f5f6fa;
@@ -76,9 +128,7 @@ nav a{
   font-size: 32px;
   margin-bottom: 30px;
   text-align: center;
-  font-family: 'Arial', sans-serif;
 }
-
 
 .news-grid {
   display: grid;
@@ -88,10 +138,8 @@ nav a{
   margin: 0 auto;
 }
 
-
-
 .newscard {
-  background: #ffffff;
+  background: #fff;
   border-radius: 12px;
   padding: 25px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -104,15 +152,24 @@ nav a{
 .newscard:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  border-color: #3498db;
+  border-color: var(--accent-color);
+}
+
+.newscard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), #2ecc71);
+  opacity: 0.8;
 }
 
 .newscard h2 {
   color: #2c3e50;
   font-size: 22px;
-  margin: 0 0 15px 0;
-  font-weight: 600;
-  line-height: 1.3;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,7 +177,7 @@ nav a{
 }
 
 .newscard .cat {
-  background: #3498db;
+  background: var(--accent-color);
   color: white;
   padding: 4px 12px;
   border-radius: 15px;
@@ -129,15 +186,13 @@ nav a{
   margin-left: 10px;
 }
 
-
 .newscard .content {
-  color: #666;
+  color: var(--text-muted);
   font-size: 16px;
   line-height: 1.6;
-  margin: 0 0 20px 0;
   text-align: justify;
+  margin-bottom: 20px;
 }
-
 
 .newscard .foot {
   display: flex;
@@ -158,20 +213,6 @@ nav a{
   font-weight: 500;
 }
 
-
-.newscard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #3498db, #2ecc71);
-  opacity: 0.8;
-}
-
-
-
 .add-con {
   display: flex;
   justify-content: center;
@@ -179,7 +220,6 @@ nav a{
   height: 90vh;
   background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e);
 }
-
 
 .add-box {
   background: rgba(255, 255, 255, 0.1);
@@ -203,7 +243,7 @@ nav a{
 }
 
 .add-box h2 {
-  color: #0ff;
+  color: var(--highlight);
   font-size: 22px;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -231,10 +271,8 @@ nav a{
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  outline: none;
-  transition: 0.3s ease-in-out;
   background: rgba(0, 0, 0, 0.6);
-  color: #0ff;
+  color: var(--highlight);
   border: 2px solid rgba(0, 255, 255, 0.4);
 }
 
@@ -250,7 +288,7 @@ nav a{
 .add-box input:focus,
 .add-box textarea:focus,
 .add-box select:focus {
-  border: 2px solid #0ff;
+  border: 2px solid var(--highlight);
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }
 
@@ -263,7 +301,7 @@ nav a{
   font-weight: bold;
   cursor: pointer;
   color: #000;
-  background: linear-gradient(90deg, #0ff, #00f);
+  background: linear-gradient(90deg, var(--highlight), #00f);
   transition: 0.3s ease-in-out;
   animation: pulse 1s infinite alternate;
   border: 2px solid rgba(0, 255, 255, 0.5);
@@ -275,7 +313,33 @@ nav a{
 }
 
 .add-box button:hover {
-  background: linear-gradient(90deg, #00f, #0ff);
+  background: linear-gradient(90deg, #00f, var(--highlight));
   transform: scale(1.1);
 }
 
+.footer {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 0px 0px 5px 0px;
+  text-align: center;
+}
+
+.footer-content nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-content nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-content nav ul li a:hover {
+  text-decoration: underline;
+}

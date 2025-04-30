@@ -14,19 +14,17 @@ const Home = () => {
   },[])
   return (
     <div className='hcon'>
-    <div className='left'>
-        <Link to="/">All</Link>
-        <Link to="/bs">Business</Link>
-        <Link to="/sp">Sports</Link>
-        <Link to="/edu">Education</Link>
-        <Link to="/news">News</Link>
-       {obj.state.token!=""&& <Link to="/pdm">PDM</Link>}
-    </div>
-    <div className='right'>
-   
-        <Outlet/>
-       
-    </div>
+      <div className='left'>
+          <Link to="/">All</Link>
+          <Link to="/bs">Business</Link>
+          <Link to="/sp">Sports</Link>
+          <Link to="/edu">Education</Link>
+          <Link to="/news">News</Link>
+        {obj.state.token!=""&& <Link to="/pdm">PDM</Link>}
+      </div>
+      <div className='right'>
+          <Outlet/>
+      </div>
     </div>
   )
 }
