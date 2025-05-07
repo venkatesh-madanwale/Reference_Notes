@@ -181,7 +181,7 @@ app.post("/add", addPost);
 app.get("/", getAllApproved);
 app.get("/posts/:cat", getByCategory);
 app.get("/postsbyme/:uid", postsByUser);
-app.get("/admin", getAllPosts); // Optionally protect with isAdmin
+app.get("/admin", getAllPosts);
 app.put("/updpost", updatePost);
 app.post("/addlike", addLike);
 app.post("/adddlike", addDislike);
