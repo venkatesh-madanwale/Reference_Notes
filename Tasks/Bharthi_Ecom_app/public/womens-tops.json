@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "name": "Classic Cotton T-Shirt",
+      "category": "Tops",
+      "brand": "FashionWear",
+      "price": 19.99,
+      "size": ["S", "M", "L", "XL"],
+      "color": "White",
+      "inStock": true,
+      "image": "Assets/w/1.jpg",
+      "description": "Soft, breathable cotton t-shirt perfect for casual wear."
+    },
+    {
+      "id": 2,
+      "name": "Floral Blouse",
+      "category": "Tops",
+      "brand": "BloomStyle",
+      "price": 34.50,
+      "size": ["S", "M", "L"],
+      "color": "Floral",
+      "inStock": true,
+      "image": "Assets/w/2.jpg",
+      "description": "Lightweight floral blouse with flutter sleeves and a relaxed fit."
+    },
+    {
+      "id": 3,
+      "name": "Lace Crop Top",
+      "category": "Tops",
+      "brand": "ChicQueen",
+      "price": 29.99,
+      "size": ["XS", "S", "M"],
+      "color": "Black",
+      "inStock": false,
+      "image": "Assets/w/3.jpg",
+      "description": "Elegant black lace crop top for night outs and parties."
+    },
+    {
+      "id": 4,
+      "name": "Denim Shirt",
+      "category": "Tops",
+      "brand": "DenimCo",
+      "price": 42.00,
+      "size": ["M", "L", "XL"],
+      "color": "Blue",
+      "inStock": true,
+      "image": "Assets/w/4.jpg",
+      "description": "Long-sleeved denim shirt with button-down front and chest pockets."
+    },
+    {
+      "id": 5,
+      "name": "Sleeveless Tank Top",
+      "category": "Tops",
+      "brand": "ActiveMode",
+      "price": 15.00,
+      "size": ["S", "M", "L", "XL"],
+      "color": "Gray",
+      "inStock": true,
+      "image": "Assets/w/5.jpg",
+      "description": "Comfortable sleeveless tank perfect for workouts or lounging."
+    },
+    {
+      "id": 6,
+      "name": "Peplum Blouse",
+      "category": "Tops",
+      "brand": "EleganceNow",
+      "price": 40.00,
+      "size": ["M", "L", "XL"],
+      "color": "Red",
+      "inStock": true,
+      "image": "Assets/w/6.jpg",
+      "description": "Stylish peplum blouse with a flattering silhouette and subtle ruffles."
+    },
+    {
+      "id": 7,
+      "name": "V-neck Sweater",
+      "category": "Tops",
+      "brand": "CozyChic",
+      "price": 49.99,
+      "size": ["S", "M", "L"],
+      "color": "Beige",
+      "inStock": true,
+      "image": "Assets/w/7.jpg",
+      "description": "Warm V-neck sweater made of soft knit material, ideal for chilly days."
+    },
+    {
+      "id": 8,
+      "name": "Basic Long Sleeve",
+      "category": "Tops",
+      "brand": "StapleWear",
+      "price": 22.99,
+      "size": ["S", "M", "L", "XL"],
+      "color": "Black",
+      "inStock": true,
+      "image": "Assets/w/8.jpg",
+      "description": "A versatile long-sleeve top that can be layered for different outfits."
+    },
+    {
+      "id": 9,
+      "name": "Striped Tunic Top",
+      "category": "Tops",
+      "brand": "CasualChic",
+      "price": 27.00,
+      "size": ["S", "M", "L"],
+      "color": "Navy",
+      "inStock": true,
+      "image": "Assets/w/9.jpg",
+      "description": "Relaxed fit striped tunic top that pairs well with leggings or jeans."
+    },
+    {
+      "id": 10,
+      "name": "Hooded Sweatshirt",
+      "category": "Tops",
+      "brand": "SportStyle",
+      "price": 38.00,
+      "size": ["S", "M", "L", "XL"],
+      "color": "Charcoal",
+      "inStock": true,
+      "image": "Assets/w/10.jpg",
+      "description": "Cozy hooded sweatshirt with a front pocket, perfect for casual wear."
+    }
+  ]
+  
