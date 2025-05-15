@@ -1,0 +1,82 @@
+/* home.css */
+
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 2rem;
+  background-color: #0d1117;
+  min-height: 100vh;
+}
+
+.home-card {
+  width: 300px;
+  background-color: #161b22;
+  color: #c9d1d9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+}
+
+.home-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.home-card .card-body {
+  padding: 1rem;
+}
+
+.home-card .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #58a6ff;
+  margin-bottom: 0.5rem;
+}
+
+.home-card p {
+  margin: 0.2rem 0;
+  color: #c9d1d9;
+}
+
+.home-card button {
+  margin-right: 0.5rem;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.home-card .btn-primary {
+  background-color: #238636;
+  color: #fff;
+}
+
+.home-card .btn-warning {
+  background-color: #d29922;
+  color: #fff;
+}
+
+.home-card .btn-danger {
+  background-color: #da3633;
+  color: #fff;
+}
+
+.home-card .btn-info {
+  background-color: #1f6feb;
+  color: #fff;
+}
+
+.home-card button:hover {
+  opacity: 0.9;
+}
