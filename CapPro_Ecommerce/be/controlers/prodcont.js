@@ -17,6 +17,8 @@ const upload = multer({ storage });
 
 const add = async (req, res) => {
   try {
+    console.log("BODY:", req.body);
+    console.log("FILE:", req.file);
     const data = new Product({ ...req.body, pimg: req.file.filename, _id: v4() });
     await data.save();
     res.json({ msg: "prod added" });

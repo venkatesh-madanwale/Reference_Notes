@@ -36,13 +36,12 @@ const Addprod = () => {
       formData.append(key, data[key]);
     }
 
-    axios
-      .post('http://localhost:5001/add', formData, {
-        headers: {
-          Authorization: obj.state.token,
-          uid: obj.state._id
-        }
-      })
+    axios.post('http://localhost:5001/add', formData, {
+      headers: {
+        Authorization: obj.state.token,
+        uid: obj.state._id
+      }
+    })
       .then((res) => {
         navigate('/');
       })
@@ -90,13 +89,21 @@ const Addprod = () => {
         required
       ></textarea>
 
-      <input
+      {/* <input
         type="file"
         name="pimg"
         onChange={handleFileChange}
         accept="image/*"
         required
-      />
+      /> */}
+
+        <input
+        type="file"
+        name="pimg"
+        onChange={handleFileChange}
+        accept="image/*"
+        required
+/>
 
       <button onClick={addProduct}>Add Product</button>
     </div>
